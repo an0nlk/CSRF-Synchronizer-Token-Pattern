@@ -16,7 +16,7 @@ if(isset($_SESSION['csrf'])){
 }
 
 //check if the post data is set correctly
-if(isset($_POST["username"]) && isset($_POST['password']) && isset($_POST['csrf'])){
+if(isset($_POST["username"]) && (isset($_POST['csrf']) && !empty($_POST['csrf'])) && isset($_POST['csrf'])){
     //compare session csrf token with post csrf token
     if($csrf != $_POST["csrf"]){
         $password_err = "Invalid CSRF token. <br/> Please refresh the page and try again";
