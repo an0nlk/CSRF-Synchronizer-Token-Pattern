@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+//check if the user not logged in
+if(!(isset($_COOKIE["sid"]) && isset($_COOKIE["user"]) && isset($_SESSION["loggedin"]))){
+    //if yes redirect to the dashboard
+    header("Location: ./login.php");
+	exit;
+}
+
 //Define variables and initialize with empty values
 $csrf = $sid =  "";
 
