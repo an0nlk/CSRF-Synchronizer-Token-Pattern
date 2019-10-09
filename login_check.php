@@ -50,9 +50,6 @@ if(isset($_POST["username"]) && isset($_POST['password']) && isset($_POST['csrf'
                 
                 //make session for user logged in for login
                 $_SESSION['loggedin'] = 1;
-
-                //unset the csrf token session
-                unset($_SESSION['csrf']);
             }
             else{
                 $password_err = "Invalid username or password.";

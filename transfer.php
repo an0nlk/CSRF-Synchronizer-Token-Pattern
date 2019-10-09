@@ -31,7 +31,7 @@ else{
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dashboard</title>
+        <title>Money Transfer</title>
         <meta charset="UTF-8">
         <meta name="author" content="Kalana Sankalpa (IT18145908)">
 
@@ -56,7 +56,7 @@ else{
     <body>
     <div class="content">
         <div class="data">
-            <span class="ftitle1">Dash<span class="stitle1">board</span></span>
+            <span class="ftitle1">Money <span class="stitle1">Transfer</span></span>
             <br />
             <p id="msg" style="font-size:30px;"><?php echo $messege; ?></p>
             <?php if($loggedin == 1){ ?>

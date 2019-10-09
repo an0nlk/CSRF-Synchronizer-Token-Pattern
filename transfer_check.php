@@ -4,8 +4,8 @@ session_start();
 //Define variables and initialize with empty values
 $csrf = $sid =  "";
 
-//check if the post data is set correctly
-if(isset($_POST["amount"]) && isset($_POST['csrf'])){
+//check if the post data is set correctly and not empty
+if(isset($_POST["amount"]) && (isset($_POST['csrf']) && !empty($_POST['csrf'])) && (isset($_COOKIE["sid"]) && !empty($_COOKIE["sid"]))){
     //check if the session that mapped token and session id is set 
     if(isset($_SESSION["map"])){
         //split the token and the session id from the session
